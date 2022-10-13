@@ -1,14 +1,23 @@
-function Carro() {
+import React from "react";
+
+export function Carro(props) {
+
+  console.log(props.marca)
+  console.log(props.cor)
+  console.log(props.ano)
+  console.log(props.flex)
+
   return (
     <div>
-      <h2>Volksvagem</h2>
+      <h2>{props.marca}</h2>
       <ul>
-        <li>Cor: Azul</li>
-        <li>Ano: 2018</li>
-        <li>Flex: Não</li>
+        <li>Cor: {props.cor}</li>
+        <li>Ano: {props.ano}</li>
+        <li>Flex: {props.flex}</li>
+        <li>Adicionado por: {props.adiconadoPor}</li>
       </ul>
     </div>
   );
 }
 
-export default Carro;
+
